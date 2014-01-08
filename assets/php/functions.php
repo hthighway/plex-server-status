@@ -22,6 +22,7 @@
 	$plex_port = $config['network']['plex_port'];
 	$zpools = $config['zpools'];
 	$filesystems = $config['filesystems'];
+	$plex_movie_section = $config['network']['plex_movie_section'];
 
 	// Set the path for the Plex Token
 $plexTokenCache = '../misc/plex_token.txt';
