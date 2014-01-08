@@ -1,6 +1,6 @@
 <?php
 
-	$config_path = "/var/www-credentials/config.ini"; //path to config file, recommend you place it outside of web root
+	$config_path = "/srv/www/pwhdesigns.com/config.ini"; //path to config file, recommend you place it outside of web root
 	
 	Ini_Set( 'display_errors', false);
 	include("lib/phpseclib0.3.5/Net/SSH2.php");
@@ -352,7 +352,8 @@ function makeRecenlyReleased()
 	global $plex_port;
 	global $plex_server_ip;
 	global $plexToken ;	// You can get your Plex token using the getPlexToken() function. This will be automated once I find out how often the token has to be updated.
-	$plexNewestXML = simplexml_load_file($plex_server_ip.'/library/sections/4/recentlyAdded');
+	global $plex_movie_section;
+	$plexNewestXML = simplexml_load_file($plex_server_ip.'/library/sections/'.$plex_movie_section.'/recentlyAdded');
 	$clientIP = get_client_ip();
 	$network = getNetwork();
 	
