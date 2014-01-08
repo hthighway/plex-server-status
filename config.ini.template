@@ -5,6 +5,7 @@ pfsense_if_name = "em1"
 wan_domain = "http://domain.com" ; include http://
 plex_server_ip = "http://127.0.0.1:32400" ; can be relative to server_ip, i.e. localhost, should include port (32400 by default)
 plex_port = 32400
+plex_movie_section = 2
 
 [credentials]
 ssh_username = 		;for pfsense
